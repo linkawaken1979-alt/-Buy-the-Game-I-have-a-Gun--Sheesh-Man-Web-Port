@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+    <title>Unity Web Player | Buy The Game, I Have a Gun -Sheesh-Man</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+      }
+      #unity-canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+    <script src="https://cdn.jsdelivr.net/gh/linkawaken1979-alt/-Buy-the-Game-I-have-a-Gun--Sheesh-Man-Web-Port@main/Build/BTH,%20IHAG%20-Sheesh-Man%20Web%20Port.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "https://media.githubusercontent.com/media/linkawaken1979-alt/-Buy-the-Game-I-have-a-Gun--Sheesh-Man-Web-Port/main/Build/BTH,%20IHAG%20-Sheesh-Man%20Web%20Port.data",
+        frameworkUrl: "https://cdn.jsdelivr.net/gh/linkawaken1979-alt/-Buy-the-Game-I-have-a-Gun--Sheesh-Man-Web-Port@main/Build/BTH,%20IHAG%20-Sheesh-Man%20Web%20Port.framework.js",
+        codeUrl: "https://media.githubusercontent.com/media/linkawaken1979-alt/-Buy-the-Game-I-have-a-Gun--Sheesh-Man-Web-Port/main/Build/BTH,%20IHAG%20-Sheesh-Man%20Web%20Port.wasm",
+        streamingAssetsUrl: "https://media.githubusercontent.com/media/linkawaken1979-alt/-Buy-the-Game-I-have-a-Gun--Sheesh-Man-Web-Port/main/StreamingAssets",
+        companyName: "Kimulators Films",
+        productName: "Buy The Game, I Have a Gun -Sheesh-Man",
+        productVersion: "01.02",
+      }).then((unityInstance) => {
+        window.unityInstance = unityInstance;
+      }).catch((message) => {
+        alert(message);
+      });
+    </script>
+  </body>
+</html>
